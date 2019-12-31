@@ -1,0 +1,16 @@
+{
+    "name": "Hairibar.EngineExtensions.Editor",
+    "references": [
+        "GUID:5670adaad8cd0454ca2553b97099322f"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
+}
