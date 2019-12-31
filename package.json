@@ -1,0 +1,10 @@
+{
+    "name": "com.hairibar.engineextensions",
+    "version": "0.1.0",
+    "displayName": "Hairibar.EngineExtensions",
+    "description": "A random assortment of small stuff I'd like built into Unity itself.",
+    "unity": "2018.1",
+    "author": {
+      "name": "Aitor Iribar"
+    }
+  }
