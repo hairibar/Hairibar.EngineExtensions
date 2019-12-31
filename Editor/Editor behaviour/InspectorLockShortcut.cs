@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEditor.ShortcutManagement;
 
-namespace Hairibar.EditorExtensions
+namespace Hairibar.EngineExtensions.Editor
 {
     /// <summary>
     /// Creates a shortcut action that toggles the inspector lock. Mapped to L by default.

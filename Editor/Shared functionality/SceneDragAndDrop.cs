@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace Hairibar.EditorExtensions
+namespace Hairibar.EngineExtensions.Editor
 {
     /// <summary>
     /// Shared functionality for draggind assets to the Scene view

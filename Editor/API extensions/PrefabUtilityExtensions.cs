@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEditor;
 
-namespace Hairibar.EditorExtensions
+namespace Hairibar.EngineExtensions.Editor
 {
     public static class PrefabUtilityExtensions
     {

@@ -1,16 +1,12 @@
 ﻿using System;
 using System.Reflection;
-
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 using UnityEditor;
 using UnityEditor.Build;
 using UnityEditor.Build.Reporting;
 
-using Hairibar.EngineExtensions;
-
-namespace Hairibar.EditorExtensions
+namespace Hairibar.EngineExtensions.Editor
 {
     public class RemoveInBuildsProcesser : IPreprocessBuildWithReport, IProcessSceneWithReport, IPostprocessBuildWithReport
     {

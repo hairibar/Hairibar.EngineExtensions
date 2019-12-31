@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 using UnityEditor;
 
-namespace Hairibar.EditorExtensions
+namespace Hairibar.EngineExtensions.Editor
 {
     /// <summary>
     /// Provides access to the Tag and Layer manager.
