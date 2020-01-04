@@ -1,7 +1,8 @@
 {
     "name": "Hairibar.EngineExtensions",
-    "references": [],
-    "optionalUnityReferences": [],
+    "references": [
+        "NaughtyAttributes.Core"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
