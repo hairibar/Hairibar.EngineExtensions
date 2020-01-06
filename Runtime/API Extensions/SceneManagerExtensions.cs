@@ -1,22 +1,24 @@
 ﻿using System;
 using UnityEngine.SceneManagement;
 
-public static class SceneManagerExtensions
+namespace Hairibar.EngineExtensions
 {
-    /// <summary>
-    /// Calls SceneManager.LoadScene(), and calls the given Action as a callback when on ActiveSceneChanged.
-    /// </summary>
-    public static void LoadScene(string scene, LoadSceneMode loadSceneMode, Action onSceneActiveCallback)
+    public static class SceneManagerExtensions
     {
-        SceneManager.LoadScene(scene, loadSceneMode);
-
-        SceneManager.activeSceneChanged += CallbackInvoker;
-
-        void CallbackInvoker(Scene previousScene, Scene newScene)
+        /// <summary>
+        /// Calls SceneManager.LoadScene(), and calls the given Action as a callback on ActiveSceneChanged.
+        /// </summary>
+        public static void LoadScene(string scene, LoadSceneMode loadSceneMode, Action onSceneActiveCallback)
         {
-            SceneManager.activeSceneChanged -= CallbackInvoker;
+            SceneManager.LoadScene(scene, loadSceneMode);
 
-            onSceneActiveCallback();
+            SceneManager.activeSceneChanged += CallbackInvoker;
+
+            void CallbackInvoker(Scene previousScene, Scene newScene)
+            {
+                SceneManager.activeSceneChanged -= CallbackInvoker;
+                onSceneActiveCallback();
+            }
         }
     }
 }
