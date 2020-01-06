@@ -5,7 +5,7 @@ namespace Hairibar.EngineExtensions
     public static class RigidbodyExtensions
     {
         /// <summary>
-        /// Performs a rigidbody.SweepTestAll, filters the results according to the given LayerMask and returns wether there is still a hit.
+        /// Performs a rigidbody.SweepTestAll, filters the results according to the given LayerMask and returns whether there is still a hit.
         /// </summary>
         public static bool SweepTestWithLayerMask(this Rigidbody rb, Vector3 direction, float maxDistance, QueryTriggerInteraction queryTriggerInteraction, LayerMask layerMask)
         {
