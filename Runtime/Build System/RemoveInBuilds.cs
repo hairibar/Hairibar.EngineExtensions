@@ -1,14 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
 
 namespace Hairibar.EngineExtensions
 {
     /// <summary>
     /// Flags the GameObject for destruction at build time. Can optionally be allowed in development builds.
     /// </summary>
-    [ExecuteAlways, DisallowMultipleComponent]
+    [ExecuteAlways, DisallowMultipleComponent, AddComponentMenu("Build System/Remove In Builds")]
     public class RemoveInBuilds : MonoBehaviour
     {
 #if UNITY_EDITOR
