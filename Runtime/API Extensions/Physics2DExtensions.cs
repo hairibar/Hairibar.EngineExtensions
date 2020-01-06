@@ -2,6 +2,9 @@
 
 public static class Physics2DExtensions
 {
+    /// <summary>
+    /// Shorthand for setting Physics2D.IgnoreCollision for every combination of the Rigidbodies' Colliders.
+    /// </summary>
     public static void IgnoreCollisions(Rigidbody2D a, Rigidbody2D b, bool ignore)
     {
         int aColliderCount = a.attachedColliderCount;
