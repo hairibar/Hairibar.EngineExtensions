@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Hairibar.EngineExtensions
 {
@@ -23,5 +21,4 @@ namespace Hairibar.EngineExtensions
             return false;
         }
     }
-
 }
