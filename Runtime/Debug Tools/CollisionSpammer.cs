@@ -1,10 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Hairibar.EngineExtensions
+namespace Hairibar.EngineExtensions.Debug
 {   
-    [RemoveInRelease]
+    /// <summary>
+    /// Logs any collision events experienced by the GameObject to console.
+    /// </summary>
+    [RemoveInRelease, AddComponentMenu("Debug/Collision Spammer")]
     public class CollisionSpammer : MonoBehaviour
     {
         public bool onCollisionEnter = true;
@@ -65,6 +66,5 @@ namespace Hairibar.EngineExtensions
             SpamExited(name, collision.collider.name);
         }
         #endregion
-
     }
 }
