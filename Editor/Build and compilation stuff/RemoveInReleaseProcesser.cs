@@ -66,7 +66,10 @@ namespace Hairibar.EngineExtensions.Editor
                 if (component is RemoveInBuilds) ProcessRemoveInBuildsComponent(component as RemoveInBuilds, useUndoActions);
                 if (!component) continue;
 
-                if (ComponentHasAttribute<RemoveInBuildsAttribute>(component)) DestroyObject(component, useUndoActions);
+                if (ComponentHasAttribute<RemoveInBuildsAttribute>(component) || (isReleaseBuild && ComponentHasAttribute<RemoveInReleaseAttribute>(component)))
+                {
+                    DestroyObject(component, useUndoActions);
+                }
             }
         }
 
