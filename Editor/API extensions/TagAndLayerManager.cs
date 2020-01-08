@@ -8,6 +8,9 @@ namespace Hairibar.EngineExtensions.Editor
     /// </summary>
     public static class TagAndLayerManager
     {
+        /// <summary>
+        /// An array of all the tags in the project.
+        /// </summary>
         public static string[] Tags
         {
             get
@@ -25,6 +28,10 @@ namespace Hairibar.EngineExtensions.Editor
                 return tags.ToArray();
             }
         }
+
+        /// <summary>
+        /// An array of all the layers in the project.
+        /// </summary>
         public static string[] Layers
         {
             get
@@ -43,7 +50,8 @@ namespace Hairibar.EngineExtensions.Editor
             }
         }
 
-
+        //The tag manager needs to be loaded as a SerializedObject. 
+        //We lazily initialize it.
         private static SerializedObject TagManager
         {
             get
@@ -59,5 +67,4 @@ namespace Hairibar.EngineExtensions.Editor
             _tagManager = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset")[0]);
         }
     }
-
 }
