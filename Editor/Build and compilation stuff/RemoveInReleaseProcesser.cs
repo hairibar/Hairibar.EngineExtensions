@@ -75,12 +75,14 @@ namespace Hairibar.EngineExtensions.Editor
 
         private void ProcessRemoveInBuildsComponent(RemoveInBuilds component, bool asUndoAction)
         {
-            bool shouldDestroy = false;
+            bool shouldDestroyGameObject;
 
-            if (isReleaseBuild) shouldDestroy = true;
-            else if (!component.isAllowedInDevBuilds) shouldDestroy = true;
+            if (!isReleaseBuild && component.isAllowedInDevBuilds) shouldDestroyGameObject = false;
+            else shouldDestroyGameObject = true;
 
-            if (shouldDestroy) DestroyObject(component.gameObject, asUndoAction);
+            shouldDestroyGameObject = !isReleaseBuild && component.isAllowedInDevBuilds;
+
+            if (shouldDestroyGameObject) DestroyObject(component.gameObject, asUndoAction);
             else DestroyObject(component, asUndoAction);
         }
 
