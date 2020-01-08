@@ -8,7 +8,10 @@ using UnityEditor.Build.Reporting;
 
 namespace Hairibar.EngineExtensions.Editor
 {
-    public class RemoveInBuildsProcesser : IPreprocessBuildWithReport, IProcessSceneWithReport, IPostprocessBuildWithReport
+    /// <summary>
+    /// Processes RemoveInBuildsAttribute, Re 
+    /// </summary>
+    internal class RemoveInBuildsProcesser : IPreprocessBuildWithReport, IProcessSceneWithReport, IPostprocessBuildWithReport
     {
         public int callbackOrder
         {
@@ -102,6 +105,5 @@ namespace Hairibar.EngineExtensions.Editor
             return att != null;
         }
         #endregion
-
     }
 }
