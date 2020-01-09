@@ -24,10 +24,8 @@ namespace Hairibar.EngineExtensions.Editor
             foreach (string prefabPath in allPrefabPaths)
             {
                 GameObject myPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(prefabPath);
-
                 action(myPrefab);
             }
         }
     }
-
 }
