@@ -44,6 +44,11 @@ namespace Hairibar.EngineExtensions
         {
             if (!camera) camera = GetComponent<Camera>();
         }
+
+        private void OnDisable()
+        {
+            camera.ResetWorldToCameraMatrix();
+            camera.ResetProjectionMatrix();
+        }
     }
 }
-
