@@ -10,5 +10,6 @@
   "type": "library",
   "dependencies": {
     "com.hairibar.naughtyattributes": "1.2.0"
-  }
+  },
+  "changelog": "CHANGELOG.md"
 }
