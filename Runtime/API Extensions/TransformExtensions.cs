@@ -7,8 +7,10 @@ namespace Hairibar.EngineExtensions
         /// <summary>
         /// Searches for a child with a name identical to name.
         /// As opposed to Transform.Find(), it searches recursively down the hierarchy. 
-        /// Returns null if no match is found. 
+        /// Returns null if no match is found.
+        /// <para>
         /// WARNING: Pretty slow, not recommended for realtime use.
+        /// </para>
         /// </summary>
         public static Transform FindChildRecursively(this Transform parent, string name)
         {

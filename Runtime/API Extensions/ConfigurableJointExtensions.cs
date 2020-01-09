@@ -2,7 +2,7 @@
 
 namespace Hairibar.EngineExtensions
 {
-    //Thank god for https://gist.github.com/mstevenson/4958837
+    //Thank god for https://gist.github.com/mstevenson/4958837.
     public static class ConfigurableJointExtensions
     {
         /// <summary>

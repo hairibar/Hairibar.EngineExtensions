@@ -2,12 +2,15 @@
 
 namespace Hairibar.EngineExtensions
 {
+    /// <summary>
+    /// Mirrors the rendered image. Done at projection stage, so virtually no performance impact.
+    /// </summary>
     [ExecuteAlways, RequireComponent(typeof(Camera)), AddComponentMenu("Rendering/Mirror Camera")]
     public class MirrorCamera : MonoBehaviour
     {
-        [SerializeField] private bool horizontal = true;
-        [SerializeField] private bool vertical = false;
-
+        //FIXME: When both mirrors are activated, things get funky.
+        public bool mirrorHorizontally = true;
+        public bool mirrorVertically = false;
 
         private new Camera camera;
         private bool originalInvertCulling;
@@ -17,13 +20,13 @@ namespace Hairibar.EngineExtensions
         {
             camera.ResetWorldToCameraMatrix();
             camera.ResetProjectionMatrix();
-            camera.projectionMatrix = camera.projectionMatrix * Matrix4x4.Scale(new Vector3((horizontal) ? -1 : 1, (vertical) ? -1 : 1, 1));
+            camera.projectionMatrix = camera.projectionMatrix * Matrix4x4.Scale(new Vector3((mirrorHorizontally) ? -1 : 1, (mirrorVertically) ? -1 : 1, 1));
         }
 
         private void OnPreRender()
         {
             originalInvertCulling = GL.invertCulling;
-            GL.invertCulling = horizontal || vertical;
+            GL.invertCulling = mirrorHorizontally || mirrorVertically;
         }
 
         private void OnPostRender()

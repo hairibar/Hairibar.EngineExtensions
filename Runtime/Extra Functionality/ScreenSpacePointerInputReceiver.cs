@@ -10,10 +10,12 @@ namespace Hairibar.EngineExtensions
     /// </summary>
     // We use a canvas in screen space and an empty Image to get those events.
     [RequireComponent(typeof(GraphicRaycaster), typeof(Canvas)), RequireComponent(typeof(StandaloneInputModule), typeof(EventSystem))]
+    [AddComponentMenu("Event/Screen Space Pointer Input Receiver")]
     public class ScreenSpacePointerInputReceiver : EventTrigger
     {
         /// <summary>
-        /// Add an event listener. WARNING: There is no way to remove a listener.
+        /// Add an event listener.
+        /// WARNING: There is currently no way to remove a listener.
         /// </summary>
         /// <param name="type">The type of event to listen to.</param>
         /// <param name="callback">The desired callback.</param>
@@ -45,4 +47,3 @@ namespace Hairibar.EngineExtensions
         }
     }
 }
-

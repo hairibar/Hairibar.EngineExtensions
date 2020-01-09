@@ -52,5 +52,4 @@ namespace Hairibar.EngineExtensions
             originalFixedDeltaTime = Time.fixedDeltaTime;
         }
     }
-
 }

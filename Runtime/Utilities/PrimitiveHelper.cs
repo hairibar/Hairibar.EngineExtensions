@@ -4,16 +4,21 @@ using UnityEngine;
 namespace Hairibar.EngineExtensions
 {
     /// <summary>
-    /// Esposes functionality for getting primitive Meshes.
+    /// Provides functionality for getting primitive Meshes
     /// </summary>
     public static class PrimitiveHelper
     {
         private static Dictionary<PrimitiveType, Mesh> primitiveMeshes = new Dictionary<PrimitiveType, Mesh>();
 
-        public static GameObject CreatePrimitive(PrimitiveType type, bool withCollider)
+        /// <summary>
+        /// Wraps GameObject.CreatePrimitive() that makes the included Collider optional.
+        /// </summary>
+        public static GameObject CreatePrimitiveGameObject(PrimitiveType type, bool withCollider)
         {
             if (withCollider) { return GameObject.CreatePrimitive(type); }
 
+            //If a collider is not requested, we make the GameObject ourselves. 
+            //This way we skip having to destroy the Collider, avoiding some unnecessary garbage generation.
             GameObject gameObject = new GameObject(type.ToString());
             MeshFilter meshFilter = gameObject.AddComponent<MeshFilter>();
             meshFilter.sharedMesh = GetPrimitiveMesh(type);
@@ -22,15 +27,19 @@ namespace Hairibar.EngineExtensions
             return gameObject;
         }
 
+        /// <summary>
+        /// The meshes are cached, so garbage is only generated the first time a specific mesh is requested.
+        /// </summary>
         public static Mesh GetPrimitiveMesh(PrimitiveType type)
         {
             if (!primitiveMeshes.ContainsKey(type))
             {
-                PrimitiveHelper.CreatePrimitiveMesh(type);
+                CreatePrimitiveMesh(type);
             }
 
             return primitiveMeshes[type];
         }
+
 
         private static Mesh CreatePrimitiveMesh(PrimitiveType type)
         {
@@ -43,4 +52,3 @@ namespace Hairibar.EngineExtensions
         }
     }
 }
-

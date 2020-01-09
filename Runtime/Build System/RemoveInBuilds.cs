@@ -15,6 +15,7 @@ namespace Hairibar.EngineExtensions
         #endregion
 #endif
         //This flag must be included when compiling for a build, as Unity has already serialized it and expects it to be there.
+        //That's why it's not UNITY_EDITOR only.
         public bool isAllowedInDevBuilds = false;
       
 #if UNITY_EDITOR

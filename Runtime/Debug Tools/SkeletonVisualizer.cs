@@ -2,6 +2,10 @@
 
 namespace Hairibar.EngineExtensions.Debugging
 {
+    /// <summary>
+    /// Recursively draws lines to visualize a Transform hierarchy.
+    /// </summary>
+    [AddComponentMenu("Debug/Skeleton Visualizer"), RemoveInRelease]
     public class SkeletonVisualizer : MonoBehaviour
     {
         public Transform rootBone;
@@ -20,7 +24,6 @@ namespace Hairibar.EngineExtensions.Debugging
                 }
                 DrawBonesRecursively(rootBone);
             }
-
         }
 
         private void DrawBonesRecursively(Transform bone)
@@ -42,8 +45,6 @@ namespace Hairibar.EngineExtensions.Debugging
             {
                 Debug.DrawRay(bone.position, bone.up * leafDirectionLength, leafDirectionColor);
             }
-            
         }
     }
-
 }
