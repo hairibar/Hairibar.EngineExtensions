@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Hairibar.EngineExtensions
+namespace Hairibar.EngineExtensions.Debugging
 {
     public class SkeletonVisualizer : MonoBehaviour
     {

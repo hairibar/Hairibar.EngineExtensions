@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Hairibar.EngineExtensions.Debug
+namespace Hairibar.EngineExtensions.Debugging
 {   
     /// <summary>
     /// Logs any collision events experienced by the GameObject to console.
