@@ -1,6 +1,6 @@
 {
   "name": "com.hairibar.engineextensions",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "displayName": "Hairibar.EngineExtensions",
   "description": "A random assortment of small stuff I'd like built into Unity itself.\nIncludes both runtime extensions and editor extensions.",
   "unity": "2018.1",
