@@ -9,7 +9,7 @@
   },
   "type": "library",
   "dependencies": {
-    "com.hairibar.naughtyattributes": "1.2.0"
+    "com.hairibar.naughtyattributes": "1.4.0"
   },
   "changelog": "CHANGELOG.md"
 }
