@@ -7,8 +7,8 @@ Add the following dependencies to your manifest.json:
 {
   "dependencies": {
     ...
-    "com.hairibar.naughtyattributes": "https://github.com/hairibar/NaughtyAttributes.git#v2.2.1"
-    "com.hairibar.engineextensions": "https://github.com/hairibar/Hairibar.EngineExtensions.git#upm"
+    "com.hairibar.naughtyattributes": "https://github.com/hairibar/NaughtyAttributes.git#v2.2.1",
+    "com.hairibar.engineextensions": "https://github.com/hairibar/Hairibar.EngineExtensions.git#upm",
     ...
   }
 }
