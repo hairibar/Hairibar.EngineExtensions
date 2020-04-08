@@ -2,14 +2,15 @@
   "name": "com.hairibar.engineextensions",
   "version": "0.6.0",
   "displayName": "Hairibar.EngineExtensions",
-  "description": "A random assortment of small stuff I'd like built into Unity itself.\nIncludes both runtime extensions and editor extensions.",
+  "description": "A collection of utility and extension functions that I have written for Unity over time.",
   "unity": "2018.1",
   "author": {
     "name": "Aitor Iribar"
   },
   "type": "library",
   "dependencies": {
-    "com.hairibar.naughtyattributes": "1.4.0"
+    "com.hairibar.naughtyattributes": "2.2.1"
   },
-  "changelog": "CHANGELOG.md"
+  "changelog": "CHANGELOG.md",
+  "license": "LICENSE.md"
 }
