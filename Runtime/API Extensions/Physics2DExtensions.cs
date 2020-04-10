@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if PHYSICS_2D_MODULE_PRESENT
+using UnityEngine;
 
 namespace Hairibar.EngineExtensions
 {
@@ -28,3 +29,4 @@ namespace Hairibar.EngineExtensions
         }
     }
 }
+#endif

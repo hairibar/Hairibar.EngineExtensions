@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if UNITY_UI_PRESENT && IMGUI_MODULE_PRESENT
+using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -47,3 +48,4 @@ namespace Hairibar.EngineExtensions
         }
     }
 }
+#endif

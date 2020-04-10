@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if SCREEN_CAPTURE_MODULE_PRESENT
+using UnityEngine;
 using NaughtyAttributes;
 
 namespace Hairibar.EngineExtensions
@@ -53,3 +54,4 @@ namespace Hairibar.EngineExtensions
         }
     }
 }
+#endif

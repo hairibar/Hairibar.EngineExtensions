@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if PHYSICS_MODULE_PRESENT || PHYSICS_2D_MODULE_PRESENT
+using UnityEngine;
 
 namespace Hairibar.EngineExtensions.Debugging
 {   
@@ -30,18 +31,12 @@ namespace Hairibar.EngineExtensions.Debugging
         #endregion
 
         #region Collision Messages
+#if PHYSICS_MODULE_PRESENT
         private void OnCollisionEnter(Collision collision)
         {
             ContactPoint contact = collision.GetContact(0);
             SpamEntered(contact.thisCollider.name, contact.otherCollider.name);
         }
-
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-            ContactPoint2D contact = collision.GetContact(0);
-            SpamEntered(contact.collider.name, contact.otherCollider.name);
-        }
-
 
         private void OnCollisionStay(Collision collision)
         {
@@ -49,22 +44,30 @@ namespace Hairibar.EngineExtensions.Debugging
             SpamStayed(contact.thisCollider.name, contact.otherCollider.name);
         }
 
+        private void OnCollisionExit(Collision collision)
+        {
+            SpamExited(name, collision.collider.name);
+        }
+#endif
+
+#if PHYSICS_2D_MODULE_PRESENT
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            ContactPoint2D contact = collision.GetContact(0);
+            SpamEntered(contact.collider.name, contact.otherCollider.name);
+        }
         private void OnCollisionStay2D(Collision2D collision)
         {
             ContactPoint2D contact = collision.GetContact(0);
             SpamStayed(contact.collider.name, contact.otherCollider.name);
         }
 
-
-        private void OnCollisionExit(Collision collision)
-        {
-            SpamExited(name, collision.collider.name);
-        }
-
         private void OnCollisionExit2D(Collision2D collision)
         {
             SpamExited(name, collision.collider.name);
         }
-        #endregion
+#endif
+#endregion
     }
 }
+#endif

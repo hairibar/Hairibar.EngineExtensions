@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if PHYSICS_MODULE_PRESENT
+using UnityEngine;
 
 namespace Hairibar.EngineExtensions
 {
@@ -61,4 +62,4 @@ namespace Hairibar.EngineExtensions
         }
     }
 }
-
+#endif

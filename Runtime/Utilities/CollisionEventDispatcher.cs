@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+﻿#if PHYSICS_MODULE_PRESENT || PHYSICS_2D_MODULE_PRESENT
+using UnityEngine;
 
 namespace Hairibar.EngineExtensions
 {
     public class CollisionEventDispatcher : MonoBehaviour
     {
+#if PHYSICS_MODULE_PRESENT
         public event System.Action<Collision> OnCollisionEntered;
         public event System.Action<Collision> OnCollisionStayed;
         public event System.Action<Collision> OnCollisionExited;
@@ -11,7 +13,9 @@ namespace Hairibar.EngineExtensions
         public event System.Action<Collider> OnTriggerEntered;
         public event System.Action<Collider> OnTriggerStayed;
         public event System.Action<Collider> OnTriggerExited;
+#endif
 
+#if PHYSICS_2D_MODULE_PRESENT
         public event System.Action<Collision2D> OnCollisionEntered2D;
         public event System.Action<Collision2D> OnCollisionStayed2D;
         public event System.Action<Collision2D> OnCollisionExited2D;
@@ -19,8 +23,9 @@ namespace Hairibar.EngineExtensions
         public event System.Action<Collider2D> OnTriggerEntered2D;
         public event System.Action<Collider2D> OnTriggerStayed2D;
         public event System.Action<Collider2D> OnTriggerExited2D;
+#endif
 
-
+#if PHYSICS_MODULE_PRESENT
         void OnCollisionEnter(Collision collision)
         {
             OnCollisionEntered?.Invoke(collision);
@@ -36,7 +41,6 @@ namespace Hairibar.EngineExtensions
             OnCollisionStayed?.Invoke(collision);
         }
 
-
         void OnTriggerEnter(Collider other)
         {
             OnTriggerEntered?.Invoke(other);
@@ -51,8 +55,9 @@ namespace Hairibar.EngineExtensions
         {
             OnTriggerExited?.Invoke(other);
         }
+#endif
 
-
+#if PHYSICS_2D_MODULE_PRESENT
         void OnCollisionEnter2D(Collision2D collision)
         {
             OnCollisionEntered2D?.Invoke(collision);
@@ -83,5 +88,7 @@ namespace Hairibar.EngineExtensions
         {
             OnTriggerExited2D?.Invoke(other);
         }
+#endif
     }
 }
+#endif
