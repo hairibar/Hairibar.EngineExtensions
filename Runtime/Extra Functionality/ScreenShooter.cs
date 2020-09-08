@@ -43,7 +43,6 @@ namespace Hairibar.EngineExtensions
             if (!Application.isPlaying) return;
 
             Time.timeScale = timeScale;
-            Time.fixedDeltaTime = originalFixedDeltaTime / timeScale;
 
             if (Input.GetKeyDown(screenshotKey)) TakeScreenshot();
         }
