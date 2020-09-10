@@ -11,5 +11,8 @@ namespace Hairibar.EngineExtensions
         {
             return mask == (mask | (1 << layer));
         }
+
+        public static LayerMask Everything => ~0;
+        public static LayerMask Nothing => 0;
     }
 }
