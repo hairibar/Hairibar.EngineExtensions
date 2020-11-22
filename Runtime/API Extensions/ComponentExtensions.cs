@@ -10,5 +10,11 @@ namespace Hairibar.EngineExtensions
             result = thisComponent.GetComponentInParent<T>();
             return result != null;
         }
+
+        public static bool TryGetComponentInChildren<T>(this Component thisComponent, out T result, bool includeInactive = false)
+        {
+            result = thisComponent.GetComponentInChildren<T>(includeInactive);
+            return result != null;
+        }
     }
 }
