@@ -1,7 +1,8 @@
 {
     "name": "Hairibar.EngineExtensions",
     "references": [
-        "NaughtyAttributes.Core"
+        "NaughtyAttributes.Core",
+        "Unity.InputSystem"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
@@ -35,6 +36,11 @@
             "name": "com.unity.modules.imgui",
             "expression": "1.0.0",
             "define": "IMGUI_MODULE_PRESENT"
+        },
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "1.0.0",
+            "define": "INPUT_SYSTEM_PRESENT"
         }
     ],
     "noEngineReferences": false
