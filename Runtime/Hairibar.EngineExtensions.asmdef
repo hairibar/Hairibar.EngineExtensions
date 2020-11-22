@@ -27,11 +27,6 @@
             "define": "SCREEN_CAPTURE_MODULE_PRESENT"
         },
         {
-            "name": "com.unity.modules.screencapture",
-            "expression": "1.0.0",
-            "define": "SCREEN_CAPTURE_MODULE_PRESENT"
-        },
-        {
             "name": "com.unity.ugui",
             "expression": "1.0.0",
             "define": "UNITY_UI_PRESENT"
