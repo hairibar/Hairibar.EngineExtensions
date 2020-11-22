@@ -2,7 +2,8 @@
     "name": "Hairibar.EngineExtensions",
     "references": [
         "NaughtyAttributes.Core",
-        "Unity.InputSystem"
+        "Unity.InputSystem",
+        "Hairibar.NaughtyExtensions"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

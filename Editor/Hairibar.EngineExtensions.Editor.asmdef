@@ -2,7 +2,8 @@
     "name": "Hairibar.EngineExtensions.Editor",
     "references": [
         "Hairibar.EngineExtensions",
-        "NaughtyAttributes.Editor"
+        "NaughtyAttributes.Editor",
+        "Hairibar.NaughtyExtensions.Editor"
     ],
     "includePlatforms": [
         "Editor"

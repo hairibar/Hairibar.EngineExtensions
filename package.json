@@ -9,7 +9,8 @@
   },
   "type": "library",
   "dependencies": {
-    "com.dbrizov.naughtyattributes": "2.0.7"
+    "com.dbrizov.naughtyattributes": "2.0.7",
+    "com.hairibar.naughtyextensions": "1.0.0"
   },
   "changelog": "CHANGELOG.md",
   "license": "LICENSE.md"
