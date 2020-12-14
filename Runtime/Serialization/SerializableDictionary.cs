@@ -3,7 +3,12 @@ using UnityEngine;
 
 namespace Hairibar.EngineExtensions.Serialization
 {
+#if UNITY_2020_1_OR_NEWER
+    [System.Serializable]
+    public class SerializableDictionary<TKey, TValue> : Dictionary<TKey, TValue>, ISerializationCallbackReceiver
+#else
     public abstract class SerializableDictionary<TKey, TValue> : Dictionary<TKey, TValue>, ISerializationCallbackReceiver
+#endif
     {
         [SerializeField] List<TKey> keys = new List<TKey>();
         [SerializeField] List<TValue> values = new List<TValue>();
