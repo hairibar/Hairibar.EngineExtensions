@@ -1,5 +1,18 @@
 # Changelog
 
+# [v2.2.0](https://github.com/hairibar/Hairibar.EngineExtensions/compare/v2.1.0...v2.2.0)
+
+> 5 January 2021
+
+
+
+### New Features
+
+- Added default drawer for SerializableDictionary [`6be79a7`](https://github.com/hairibar/Hairibar.EngineExtensions/commit/6be79a7b0eae041093a996392f303e0d4a880dea)
+
+
+
+
 # [v2.1.0](https://github.com/hairibar/Hairibar.EngineExtensions/compare/v2.0.0...v2.1.0)
 
 > 5 January 2021
