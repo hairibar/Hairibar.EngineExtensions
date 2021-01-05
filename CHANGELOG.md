@@ -1,5 +1,23 @@
 # Changelog
 
+# [v2.1.0](https://github.com/hairibar/Hairibar.EngineExtensions/compare/v2.0.0...v2.1.0)
+
+> 5 January 2021
+
+
+
+### New Features
+
+- Added [Tools/Cleanup/Delete Empty Folders] MenuItem [`d041693`](https://github.com/hairibar/Hairibar.EngineExtensions/commit/d0416933cc275ba36734089835eccd2af2d4c618)
+- Added PathUtilities.GetRelativePath() and PathUtilities.AppendDirectorySeparatorChar() [`4b28619`](https://github.com/hairibar/Hairibar.EngineExtensions/commit/4b28619b16c72c2a1d2ac2220fae2bb80643086e)
+- Made SerializableDictionary non-abstract and [Serializable] from 2020.1 [`708d174`](https://github.com/hairibar/Hairibar.EngineExtensions/commit/708d17488e9119b29cfb8c76c964dbc69510e12b)
+
+
+### Documentation
+
+- Updated dependency section in README [`a06313e`](https://github.com/hairibar/Hairibar.EngineExtensions/commit/a06313ed59cfb8edd7c15ec84728c5f9544e6423)
+
+
 # [v2.0.0](https://github.com/hairibar/Hairibar.EngineExtensions/compare/v1.3.0...v2.0.0)
 
 > 23 November 2020
