@@ -1,5 +1,18 @@
 # Changelog
 
+# [v2.3.0](https://github.com/hairibar/Hairibar.EngineExtensions/compare/v2.2.0...v2.3.0)
+
+> 19 February 2021
+
+
+
+### New Features
+
+- Made CollisionEventDispatcher pass itself for easy identification [`d14d0c5`](https://github.com/hairibar/Hairibar.EngineExtensions/commit/d14d0c52d14642f91c5da37c1fdee4ddef3331e6)
+
+
+
+
 # [v2.2.0](https://github.com/hairibar/Hairibar.EngineExtensions/compare/v2.1.0...v2.2.0)
 
 > 5 January 2021
